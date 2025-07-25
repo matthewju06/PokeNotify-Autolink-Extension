@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PokeNotify</title>
+    <meta charset="UTF-8" />
+    <style>
+        body {
+          font-family: 'Arial Black', 'Segoe UI', sans-serif;
+          background-color: #e13030;
+          color: white;
+          margin: 0;
+          padding: 12px;
+          width: 280px;
+          height: 560px;
+          box-sizing: border-box;
+        }
+
+        h3 {
+          margin-top: 10px;
+          font-weight: 900;
+          font-size: 18px;
+          letter-spacing: 0.5px;
+        }
+
+        .logo {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          width: 80px;
+        }
+
+        .sku-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 8px;
+          background: rgba(255, 255, 255, 0.1);
+          padding: 6px 8px;
+          border-radius: 6px;
+          font-size: 11px;
+        }
+
+        input[type="file"] {
+          margin-top: 10px;
+        }
+
+        button {
+          margin-left: 5px;
+          padding: 4px 8px;
+          font-weight: bold;
+          border: none;
+          border-radius: 4px;
+          background: white;
+          color: #e13030;
+          cursor: pointer;
+        }
+
+        button:hover {
+          background: #ffe3e3;
+        }
+
+        hr {
+          border: 0;
+          height: 1px;
+          background: white;
+          margin: 12px 0;
+        }
+    </style>
+</head>
+<body>
+<img src="logo.avif" class="logo" />
+<h3>Target 10+ Opener</h3>
+
+<label>
+    <input type="checkbox" id="all-toggle" />
+    <strong>All Products</strong> (ignore individual switches)
+</label>
+<br /><br />
+
+
+<input type="file" id="file-input" accept=".json,.txt" />
+<button id="file-import-btn">Import from File</button>
+<hr />
+
+<label for="set-filter">Filter by Set:</label>
+<select id="set-filter">
+    <option value="*">All Sets</option>
+</select>
+<hr />
+
+<div id="sku-list"></div>
+
+<script src="popup.js"></script>
+</body>
+</html>

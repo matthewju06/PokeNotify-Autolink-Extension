@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Pokenotify Target 10+ Auto opener",
+  "version": "1.0",
+  "permissions": ["storage", "scripting", "tabs"],
+  "icons": {
+    "16": "extLogo.png",
+    "32": "extLogo.png",
+    "48": "extLogo.png",
+    "128": "extLogo.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "extLogo.png",
+      "32": "extLogo.png",
+      "48": "extLogo.png",
+      "128": "extLogo.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://discord.com/channels/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
